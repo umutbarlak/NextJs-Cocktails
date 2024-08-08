@@ -10,10 +10,6 @@ export function BasketProvider({ children }) {
   const [basket, setBasket] = useState([]);
   const [savedBasket, setSavedBasket] = useLocalStorage("basket", []);
 
-  if (basket === null) {
-    return [];
-  }
-
   const addToBasket = (newProduct) => {
     const found = basket.find((i) => i.idDrink === newProduct.idDrink);
 
